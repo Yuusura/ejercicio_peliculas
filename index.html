@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>Práctica películas</title>
+</head>
+
+<body>
+    <h2>Añadir nueva película:</h2>
+    <form>
+        <label for="title">Título</label>
+        <input id="title" type="text" placeholder="Titanic" required />
+
+        <label for="year">Año</label>
+        <input id="year" type="text" placeholder="1997" maxlength="4" required />
+
+        <label for="description">Descripción</label>
+        <textarea id="description"
+            placeholder="Titanic es una película estadounidense de 1997, dramática y de catástrofe, dirigida y escrita por James Cameron y protagonizada por Leonardo DiCaprio, Kate Winslet..."
+            rows="4" cols="50" required></textarea>
+
+        <label for="image">URL foto</label>
+        <input id="image" type="text" placeholder="https://..." required />
+
+        <label for="genre">Género</label>
+        <select id="genre" required>
+            <option>Acción</option>
+            <option>Comedia</option>
+            <option>Romántica</option>
+            <option>Terror</option>
+        </select>
+        <button id="button" type="submit">Añadir película</button>
+    </form>
+    <section>
+        <h2>Películas añadidas recientemente:</h2>
+        <label for="filterButton">Filtrar por género:</label>
+        <select id="filterButton">
+            <option>Todos</option>
+            <option>Acción</option>
+            <option>Comedia</option>
+            <option>Romántica</option>
+            <option>Terror</option>
+        </select>
+        <label for="filterTitle">Filtrar por nombre:</label>
+        <input id="filterTitle" type="text" placeholder="Buscar película"/>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Imagen</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Año</th>
+                    <th scope="col">Género</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí irá la tabla que se va creando en el DOM con la función "paintTable()"-->
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>
